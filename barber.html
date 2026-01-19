@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Przewodnik: Nauka Barberskości od Podstaw</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #e0e0e0;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(0,0,0,0.6);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+
+        h1 {
+            color: #d4af37;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #999;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+
+        h2 {
+            color: #d4af37;
+            font-size: 1.8rem;
+            margin: 30px 0 15px;
+            border-bottom: 2px solid #d4af37;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #b8942c;
+            font-size: 1.3rem;
+            margin: 20px 0 10px;
+        }
+
+        .section {
+            background: rgba(255,255,255,0.03);
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border-left: 4px solid #d4af37;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .tool-card {
+            background: rgba(212, 175, 55, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .tool-card h4 {
+            color: #d4af37;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .price {
+            color: #4CAF50;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .tip {
+            background: rgba(76, 175, 80, 0.1);
+            border-left: 4px solid #4CAF50;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .warning {
+            background: rgba(255, 152, 0, 0.1);
+            border-left: 4px solid #FF9800;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .step {
+            background: rgba(33, 150, 243, 0.1);
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 3px solid #2196F3;
+        }
+
+        .step-number {
+            display: inline-block;
+            background: #2196F3;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .highlight {
+            color: #d4af37;
+            font-weight: bold;
+        }
+
+        .video-link {
+            display: inline-block;
+            background: #d4af37;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 10px 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .video-link:hover {
+            background: #fff;
+            transform: translateY(-2px);
+        }
+
+        .progress-bar {
+            background: rgba(212, 175, 55, 0.2);
+            height: 8px;
+            border-radius: 4px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            background: linear-gradient(90deg, #d4af37, #b8942c);
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.3s;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        th {
+            background: rgba(212, 175, 55, 0.2);
+            color: #d4af37;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔥 Kompletny Przewodnik do Nauki Barberskości 🔥</h1>
+        <p class="subtitle">Od Zera do Profesjonalisty - Wszystko czego potrzebujesz wiedzieć</p>
+
+        <div class="section">
+            <h2>📚 Wprowadzenie - Zanim Zaczniesz</h2>
+            <p>Barberskość to połączenie sztuki i rzemiosła. Nie jest to łatwe - profesjonalni barberzy szkolą się przez <span class="highlight">600-1500 godzin</span>, a aby osiągnąć dobry poziom potrzeba <span class="highlight">2-3 lat praktyki</span>.</p>
+            
+            <div class="warning">
+                <strong>⚠️ WAŻNE:</strong> Nauka barberskości wymaga cierpliwości! Będziesz popełniać błędy, będziesz marnować czas na poprawki. To normalne! Każdy profesjonalny barber przez to przeszedł.
+            </div>
+
+            <div class="tip">
+                <strong>💡 RADA:</strong> Zacznij od ćwiczeń na manekinie lub znajomych, którzy zgodzą się być "królikami doświadczalnymi". Nie próbuj od razu strzyc za pieniądze!
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🛠️ KROK 1: Niezbędne Narzędzia dla Początkujących</h2>
+            <p>Nie musisz kupować najdroższego sprzętu na start. Oto lista <span class="highlight">absolutnych podstaw</span>:</p>
+
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h4>✂️ Maszynka do Włosów</h4>
+                    <p><strong>Polecane modele dla początkujących:</strong></p>
+                    <ul>
+                        <li>Wahl Magic Clip (bezprzewodowa)</li>
+                        <li>Wahl Designer</li>
+                        <li>Andis Master</li>
+                    </ul>
+                    <p>Cechy: lekka, długi czas pracy, nie przegrzewa się szybko</p>
+                    <div class="price">Cena: 200-500 zł</div>
+                </div>
+
+                <div class="tool-card">
+                    <h4>🔧 Trimmer (Konturowka)</h4>
+                    <p><strong>Do precyzyjnych detali:</strong></p>
+                    <ul>
+                        <li>Andis Headliner</li>
+                        <li>Wahl Detailer</li>
+                        <li>Babyliss Pro</li>
+                    </ul>
+                    <p>Do linii, wzorów i detali wokół uszu</p>
+                    <div class="price">Cena: 150-400 zł</div>
+                </div>
+
+                <div class="tool-card">
+                    <h4>✂️ Nożyczki Fryzjerskie</h4>
+                    <p><strong>Długość: 5.5-6 cali</strong></p>
+                    <ul>
+                        <li>Do dłuższych włosów</li>
+                        <li>Do teksturowania</li>
+                        <li>Precyzyjne cięcia</li>
+                    </ul>
+                    <p>Nie kupuj zwykłych nożyczek! Potrzebujesz profesjonalnych</p>
+                    <div class="price">Cena: 100-600 zł</div>
+                </div>
+
+                <div class="tool-card">
+                    <h4>🪒 Brzytwa (Straight Razor)</h4>
+                    <p><strong>Do golenia i detali:</strong></p>
+                    <ul>
+                        <li>Brzytwa ze zmiennymi ostrzami (bezpieczniejsza)</li>
+                        <li>Pasek do ostrzenia</li>
+                    </ul>
+                    <p>Do czystych linii i tradycyjnego golenia</p>
+                    <div class="price">Cena: 80-300 zł</div>
+                </div>
+
+                <div class="tool-card">
+                    <h4>📏 Grzebienie</h4>
+                    <ul>
+                        <li><strong>Taper Comb</strong> - do blendingu</li>
+                        <li><strong>Wide-tooth</strong> - do grubych włosów</li>
+                        <li><strong>Fine-tooth</strong> - do precyzyjnych cięć</li>
+                        <li><strong>Flat-top comb</strong> - do techniki clipper over comb</li>
+                    </ul>
+                    <div class="price">Cena: 20-80 zł za zestaw</div>
+                </div>
+
+                <div class="tool-card">
+                    <h4>🧴 Środki Pielęgnacyjne</h4>
+                    <ul>
+                        <li><strong>Barbicide</strong> - dezynfekcja narzędzi</li>
+                        <li><strong>Clipper Oil</strong> - olejek do maszynek</li>
+                        <li><strong>Andis Cool Care</strong> - spray chłodzący</li>
+                        <li>Spray z wodą</li>
+                    </ul>
+                    <div class="price">Cena: 50-150 zł</div>
+                </div>
+
+                <div class="tool-card">
+                    <h4>🎽 Akcesoria</h4>
+                    <ul>
+                        <li>Peleryna fryzjerska (barber cape)</li>
+                        <li>Paski na szyję (neck strips)</li>
+                        <li>Ręczniki</li>
+                        <li>Szczotka do zmiatania włosów</li>
+                        <li>Puder styptic (na skaleczenia)</li>
+                    </ul>
+                    <div class="price">Cena: 100-200 zł</div>
+                </div>
+
+                <div class="tool-card">
+                    <h4>💈 Nasadki do Maszynki</h4>
+                    <p><strong>Podstawowe rozmiary:</strong></p>
+                    <ul>
+                        <li>#0 - 0.5mm (skóra)</li>
+                        <li>#1 - 3mm</li>
+                        <li>#2 - 6mm</li>
+                        <li>#3 - 9mm</li>
+                        <li>#4 - 12mm</li>
+                        <li>#7 - 22mm (góra)</li>
+                    </ul>
+                    <p>Zazwyczaj dołączone do maszynek</p>
+                </div>
+            </div>
+
+            <div class="tip">
+                <strong>💰 BUDŻET NA START:</strong> Podstawowy zestaw narzędzi to koszt około 800-1500 zł. Nie musisz kupować wszystkiego naraz - zacznij od maszynki, trimmera i podstawowych grzebieni.
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🎓 KROK 2: Podstawowe Techniki do Opanowania</h2>
+            
+            <h3>1. Trzymanie Narzędzi</h3>
+            <div class="step">
+                <p><strong>Maszynka:</strong></p>
+                <ul>
+                    <li>Trzymaj maszynkę pewnie, ale nie za mocno</li>
+                    <li>Kciuk na przełączniku dźwigni (lever)</li>
+                    <li>Maszynka powinna być przedłużeniem twojej ręki</li>
+                    <li>Ćwicz ruch góra-dół, płynnie</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <p><strong>Nożyczki:</strong></p>
+                <ul>
+                    <li>Kciuk w jednym oku, palec serdeczny w drugim</li>
+                    <li>Pozostałe palce służą do stabilizacji</li>
+                    <li>Grzebień w drugiej ręce</li>
+                </ul>
+            </div>
+
+            <h3>2. Podstawowe Techniki Cięcia</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Technika</th>
+                        <th>Opis</th>
+                        <th>Zastosowanie</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Clipper Over Comb</strong></td>
+                        <td>Maszynka prowadzona nad grzebieniem</td>
+                        <td>Precyzyjne blendowanie boków i tyłu głowy</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Scissor Over Comb</strong></td>
+                        <td>Nożyczki nad grzebieniem</td>
+                        <td>Tworzenie tekstury, objętości, klasyczne cięcia</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Texturizing</strong></td>
+                        <td>Przerzedzanie włosów nożyczkami</td>
+                        <td>Redukcja objętości, dodanie ruchu</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Point Cutting</strong></td>
+                        <td>Cięcie końcówkami nożyczek pod kątem</td>
+                        <td>Naturalny efekt, usunięcie masy bez utraty długości</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tapering</strong></td>
+                        <td>Stopniowe skracanie włosów</td>
+                        <td>Subtelne, klasyczne przejścia</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>3. Rodzaje Fade (Przejścia)</h3>
+            
+            <div class="step">
+                <span class="step-number">1</span>
+                <strong>Low Fade</strong>
+                <p>Przejście rozpoczyna się nisko, tuż nad uchem. Najbardziej subtelne i klasyczne.</p>
+            </div>
+
+            <div class="step">
+                <span class="step-number">2</span>
+                <strong>Mid Fade</strong>
+                <p>Przejście zaczyna się w połowie wysokości głowy, około skroni.</p>
+            </div>
+
+            <div class="step">
+                <span class="step-number">3</span>
+                <strong>High Fade</strong>
+                <p>Przejście rozpoczyna się wysoko, tworząc dramatyczny kontrast z górą.</p>
+            </div>
+
+            <div class="step">
+                <span class="step-number">4</span>
+                <strong>Skin/Bald Fade</strong>
+                <p>Przejście do gołej skóry (0mm). Najbardziej zaawansowane!</p>
+            </div>
+
+            <div class="step">
+                <span class="step-number">5</span>
+                <strong>Drop Fade</strong>
+                <p>Przejście "opada" za uchem, tworząc charakterystyczny łuk.</p>
+            </div>
+
+            <div class="step">
+                <span class="step-number">6</span>
+                <strong>Burst Fade</strong>
+                <p>Koncentruje się wokół ucha, pozostawiając włosy z tyłu głowy dłuższe.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📋 KROK 3: Jak Wykonać Podstawowy Fade - TUTORIAL</h2>
+            
+            <div class="step">
+                <span class="step-number">1</span>
+                <strong>Przygotowanie</strong>
+                <ul>
+                    <li>Zwilż włosy sprejem z wodą (jeśli są brudne lub splątane)</li>
+                    <li>Zaczesz włosy w dół, aby leżały naturalnie</li>
+                    <li>Przygotuj nasadki: #2, #1, #0.5 (lub zero gap)</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <span class="step-number">2</span>
+                <strong>Wyznacz Linie Bazowe (Guidelines)</strong>
+                <ul>
+                    <li>Zacznij od nasadki #2 (6mm)</li>
+                    <li>Strzyż boki i tył głowy ruchem w górę</li>
+                    <li>Trzymaj maszynkę płasko do głowy</li>
+                    <li>Zatrzymaj się w tym samym miejscu wokół całej głowy</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <span class="step-number">3</span>
+                <strong>Pierwsze Przejście (Blending)</strong>
+                <ul>
+                    <li>Zmień na nasadkę #1 (3mm)</li>
+                    <li>Strzyż w połowie wysokości do linii #2</li>
+                    <li>Używaj ruchu "scooping" - lekko odchylaj maszynkę w górę</li>
+                    <li>To stworzy pierwsze przejście</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <span class="step-number">4</span>
+                <strong>Blend - Płynne Przejście</strong>
+                <ul>
+                    <li>Używaj dźwigni (lever) maszynki - otwarta/zamknięta</li>
+                    <li>Zamknięta dźwignia = krótsza długość</li>
+                    <li>Otwarta dźwignia = dłuższa długość</li>
+                    <li>Pracuj w pozycji pół-otwartej między liniami</li>
+                    <li>Powtarzaj ruch, aż znikną ostre linie</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <span class="step-number">5</span>
+                <strong>Najniższe Przejście (Do Skóry)</strong>
+                <ul>
+                    <li>Użyj nasadki #0.5 lub zero gap (bez nasadki)</li>
+                    <li>Bardzo delikatnie, nisko przy linii włosów</li>
+                    <li>Blend z wyższą częścią używając dźwigni</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <span class="step-number">6</span>
+                <strong>Detale - Trimmer</strong>
+                <ul>
+                    <li>Ostrożnie zdefiniuj linię włosów wokół uszu</li>
+                    <li>Wyczyść kark - pozioma linia lub łuk</li>
+                    <li>Boki (burny) - naturalna linia lub precyzyjna krawędź</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <span class="step-number">7</span>
+                <strong>Góra Głowy</strong>
+                <ul>
+                    <li>Dla dłuższych włosów: użyj nożyczek lub nasadki #7-8</li>
+                    <li>Scissor over comb dla tekstury</li>
+                    <li>Point cutting dla naturalnego wykończenia</li>
+                </ul>
+            </div>
+
+            <div class="warning">
+                <strong>⚠️ NAJCZĘSTSZE BŁĘDY POCZĄTKUJĄCYCH:</strong>
+                <ul>
+                    <li>Za szybkie ruchy - rób wszystko powoli!</li>
+                    <li>Za mocny docisk maszynki - lekki dotyk!</li>
+                    <li>Brak płynności w blendingu - powtarzaj ruchy</li>
+                    <li>Strzyżenie suchych, splątanych włosów</li>
+                    <li>Nie sprawdzanie symetrii z różnych kątów</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🎯 KROK 4: Plan Nauki (0-12 miesięcy)</h2>
+
+            <h3>Miesiąc 1-2: PODSTAWY</h3>
+            <ul>
+                <li>Naucz się prawidłowo trzymać narzędzia</li>
+                <li>Ćwicz na manekinie - proste buzz cuty</li>
+                <li>Opanuj konserwację narzędzi (czyszczenie, olejenie)</li>
+                <li>Studiuj anatomię głowy i wzrosty włosów</li>
+                <li><strong>Cel:</strong> Zrób 20 buzz cutów na manekinie</li>
+            </ul>
+
+            <h3>Miesiąc 3-4: PIERWSZE PRZEJŚCIA</h3>
+            <ul>
+                <li>Zacznij ćwiczyć proste fade (low fade)</li>
+                <li>Ucz się używać dźwigni maszynki</li>
+                <li>Ćwicz clipper over comb</li>
+                <li>Pierwsze cięcia na znajomych (za darmo!)</li>
+                <li><strong>Cel:</strong> Zrób 15 low fade'ów</li>
+            </ul>
+
+            <h3>Miesiąc 5-6: ZAAWANSOWANE PRZEJŚCIA</h3>
+            <ul>
+                <li>Mid fade i high fade</li>
+                <li>Ćwicz skin fade (do skóry)</li>
+                <li>Naucz się detali trimmerem</li>
+                <li>Opanuj różne style góry (pompadour, quiff)</li>
+                <li><strong>Cel:</strong> 30 różnych fade'ów</li>
+            </ul>
+
+            <h3>Miesiąc 7-9: SPECJALISTYCZNE TECHNIKI</h3>
+            <ul>
+                <li>Drop fade i burst fade</li>
+                <li>Wzory i designy w włosach</li>
+                <li>Golenie brzytwą i zabiegi na twarz</li>
+                <li>Praca z różnymi typami włosów (kręcone, proste, afro)</li>
+                <li><strong>Cel:</strong> 50+ strzyżeń różnych typów</li>
+            </ul>
+
+            <h3>Miesiąc 10-12: PERFEKCJA I SZYBKOŚĆ</h3>
+            <ul>
+                <li>Skracaj czas strzyżenia (cel: 30-45 min na fade)</li>
+                <li>Buduj portfolio - rób zdjęcia prac</li>
+                <li>Rozwijaj styl konsultacji z klientem</li>
+                <li>Ucz się koloryzacji i stylizacji</li>
+                <li><strong>Cel:</strong> Profesjonalny poziom - gotowy do pracy</li>
+            </ul>
+
+            <div class="tip">
+                <strong>📊 REALISTYCZNE OCZEKIWANIA:</strong>
+                <ul>
+                    <li>Pierwsze 6 miesięcy: strzyżenie zajmuje 1-2 godziny</li>
+                    <li>Po roku: 45-60 minut na pełne strzyżenie</li>
+                    <li>Profesjonaliści: 20-30 minut</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📺 KROK 5: Darmowe Źródła Nauki</h2>
+
+            <h3>YouTube - Najlepsze Kanały</h3>
+            <ul>
+                <li><strong>360Jeezy</strong> - szczegółowe tutoriale fade</li>
+                <li><strong>TheBarberPost</strong> - techniki dla początkujących</li>
+                <li><strong>Blumaan</strong> - stylizacja i produkty</li>
+                <li><strong>Cut Throat Barbers</strong> - zaawansowane techniki</li>
+                <li><strong>Chris Bossio</strong> - profesjonalne tutoriale</li>
+            </ul>
+
+            <h3>Instagram - Śledź Profesjonalistów</h3>
+            <ul>
+                <li>@barbershopconnect</li>
+                <li>@national_barbers_association</li>
+                <li>@thebarberpost</li>
+                <li>Lokalni barberzy w Twoim mieście</li>
+            </ul>
+
+            <h3>Kursy Online (Płatne, ale warte)</h3>
+            <ul>
+                <li><strong>Udemy</strong> - "Become a Barber with the One Minute Barber" (~50 zł)</li>
+                <li><strong>Skillshare</strong> - różne kursy barberskości</li>
+                <li><strong>The Barber's System</strong> - kompleksowy kurs online</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>💼 KROK 6: Praktyka i Rozwój</h2>
+
+            <h3>Jak Zdobyć Praktykę?</h3>
+            <div class="step">
+                <p><strong>1. Znajomi i Rodzina</strong></p>
+                <p>Zacznij od osób, które Ci ufają. Bądź szczery - "uczę się, mogę popełnić błąd".</p>
+            </div>
+
+            <div class="step">
+                <p><strong>2. Social Media</strong></p>
+                <p>Załóż konto Instagram, pokazuj swoje prace (nawet te niedoskonałe). Oferuj darmowe strzyżenia w zamian za zdjęcia.</p>
+            </div>
+
+            <div class="step">
+                <p><strong>3. Praktyki w Barbershopie</strong></p>
+                <p>Zapytaj lokalnych barberów czy możesz obserwować ich pracę. Wiele salonów szuka uczniów/asystentów.</p>
+            </div>
+
+            <div class="step">
+                <p><strong>4. Wolontariat</strong></p>
+                <p>Schroniska, domy opieki - często potrzebują fryzjerów-wolontariuszy.</p>
+            </div>
+
+            <h3>Budowanie Portfolio</h3>
+            <ul>
+                <li>Rób zdjęcia KAŻDEGO strzyżenia (telefon wystarczy)</li>
+                <li>Dokumentuj postępy - before/after</li>
+                <li>Stwórz Instagram portfolio</li>
+                <li>Zbieraj feedback od klientów</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>🚨 NAJWAŻNIEJSZE ZASADY BEZPIECZEŃSTWA</h2>
+
+            <div class="warning">
+                <strong>HIGIENA I SANITACJA:</strong>
+                <ul>
+                    <li><strong>ZAWSZE</strong> dezynfekuj narzędzia między klientami</li>
+                    <li>Używaj Barbicide - zanurz narzędzia na 10 minut</li>
+                    <li>Wymień płyn Barbicide codziennie
