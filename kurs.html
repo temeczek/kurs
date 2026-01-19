@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kompletny Kurs Barberskości - Od Zera do Profesjonalisty</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #e0e0e0;
+            background: #0a0a0a;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d1a1a 100%);
+            padding: 100px 20px 60px;
+            text-align: center;
+            border-bottom: 3px solid #d4af37;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: #d4af37;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: #999;
+            margin-bottom: 30px;
+        }
+
+        .progress-tracker {
+            background: rgba(212, 175, 55, 0.1);
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 1000px;
+            border-radius: 10px;
+            border: 2px solid #d4af37;
+        }
+
+        .progress-tracker h3 {
+            color: #d4af37;
+            margin-bottom: 15px;
+        }
+
+        .progress-bar-container {
+            background: rgba(0,0,0,0.5);
+            height: 30px;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-bar-fill {
+            background: linear-gradient(90deg, #d4af37, #b8942c);
+            height: 100%;
+            width: 0%;
+            transition: width 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 10px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(0,0,0,0.95);
+            padding: 15px 0;
+            z-index: 1000;
+            border-bottom: 2px solid #d4af37;
+            backdrop-filter: blur(10px);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav a {
+            color: #d4af37;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            padding: 5px 15px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background: rgba(212, 175, 55, 0.2);
+            transform: translateY(-2px);
+        }
+
+        h2 {
+            color: #d4af37;
+            font-size: 2.5rem;
+            margin: 50px 0 30px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #d4af37, transparent);
+        }
+
+        h3 {
+            color: #b8942c;
+            font-size: 1.8rem;
+            margin: 30px 0 15px;
+        }
+
+        h4 {
+            color: #d4af37;
+            font-size: 1.3rem;
+            margin: 20px 0 10px;
+        }
+
+        .section {
+            background: linear-gradient(135deg, rgba(20,20,20,0.9), rgba(30,20,20,0.8));
+            padding: 40px;
+            margin: 30px 0;
+            border-radius: 15px;
+            border-left: 5px solid #d4af37;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .haircut-tutorial {
+            background: rgba(212, 175, 55, 0.05);
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 12px;
+            border: 2px solid #d4af37;
+        }
+
+        .haircut-tutorial h3 {
+            color: #d4af37;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .difficulty {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .difficulty.easy {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .difficulty.medium {
+            background: #FF9800;
+            color: white;
+        }
+
+        .difficulty.hard {
+            background: #f44336;
+            color: white;
+        }
+
+        .steps-container {
+            display: grid;
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .step {
+            background: linear-gradient(135deg, rgba(33, 150, 243, 0.1), rgba(33, 150, 243, 0.05));
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #2196F3;
+            transition: all 0.3s;
+        }
+
+        .step:hover {
+            transform: translateX(10px);
+            background: linear-gradient(135deg, rgba(33, 150, 243, 0.2), rgba(33, 150, 243, 0.1));
+        }
+
+        .step-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .step-number {
+            background: #2196F3;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .step-title {
+            color: #2196F3;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .tool-card {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(212, 175, 55, 0.05));
+            padding: 25px;
+            border-radius: 12px;
+            border: 2px solid rgba(212, 175, 55, 0.4);
+            transition: all 0.3s;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3);
+            border-color: #d4af37;
+        }
+
+        .tool-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            color: #4CAF50;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 15px;
+        }
+
+        .tip {
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.15), rgba(76, 175, 80, 0.05));
+            border-left: 5px solid #4CAF50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .tip::before {
+            content: "💡 WSKAZÓWKA PRO";
+            display: block;
+            color: #4CAF50;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .warning {
+            background: linear-gradient(135deg, rgba(255, 152, 0, 0.15), rgba(255, 152, 0, 0.05));
+            border-left: 5px solid #FF9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .warning::before {
+            content: "⚠️ UWAGA";
+            display: block;
+            color: #FF9800;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .video-resources {
+            background: rgba(156, 39, 176, 0.1);
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 2px solid #9C27B0;
+        }
+
+        .video-link {
+            display: inline-block;
+            background: #d4af37;
+            color: #000;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin: 10px 10px 10px 0;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .video-link:hover {
+            background: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        .quiz-section {
+            background: rgba(103, 58, 183, 0.1);
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 12px;
+            border: 2px solid #673AB7;
+        }
+
+        .quiz-question {
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 8px;
+        }
+
+        .quiz-options {
+            display: grid;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .quiz-option {
+            background: rgba(103, 58, 183, 0.2);
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .quiz-option:hover {
+            background: rgba(103, 58, 183, 0.4);
+            border-color: #673AB7;
+        }
+
+        .quiz-option.correct {
+            background: rgba(76, 175, 80, 0.3);
+            border-color: #4CAF50;
+        }
+
+        .quiz-option.incorrect {
+            background: rgba(244, 67, 54, 0.3);
+            border-color: #f44336;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background: rgba(0,0,0,0.3);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        th {
+            background: rgba(212, 175, 55, 0.3);
+            color: #d4af37;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        tr:hover {
+            background: rgba(212, 175, 55, 0.1);
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .comparison-card {
+            background: rgba(33, 150, 243, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #2196F3;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 20px 0 20px 40px;
+            margin: 30px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, #d4af37, #2196F3);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding: 20px;
+            margin: 20px 0;
+            background: rgba(212, 175, 55, 0.05);
+            border-radius: 8px;
+            border-left: 3px solid #d4af37;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -43px;
+            top: 25px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #d4af37;
+            border: 3px solid #0a0a0a;
+        }
+
+        .checklist {
+            background: rgba(76, 175, 80, 0.1);
+            padding: 25px;
+            border-radius: 10px;
+            border: 2px solid #4CAF50;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px;
+            margin: 10px 0;
+            background: rgba(0,0,0,0.3);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .checklist-item:hover {
+            background: rgba(76, 175, 80, 0.2);
+        }
+
+        .checkbox {
+            width: 24px;
+            height: 24px;
+            border: 2px solid #4CAF50;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .checkbox.checked {
+            background: #4CAF50;
+        }
+
+        .checkbox.checked::after {
+            content: '✓';
+            color: white;
+            font-weight: bold;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        .slide-in {
+            animation: slideInLeft 0.8s ease-out;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .section {
+                padding: 20px;
+            }
+
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>💈 Kompletny Kurs Barberskości 💈</h1>
+        <p class="hero-subtitle">Od Zera do Profesjonalisty - Najlepszy Przewodnik w Polsce</p>
+        
+        <div class="progress-tracker">
+            <h3>Twój Postęp w Kursie</h3>
+            <div class="progress-bar-container">
+                <div class="progress-bar-fill" id="progressBar">0%</div>
+            </div>
+            <p style="margin-top: 15px;">Ukończono: <span id="completedItems">0</span> / <span id="totalItems">50</span> lekcji</p>
+        </div>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#intro">Start</a></li>
+            <li><a href="#tools">Narzędzia</a></li>
+            <li><a href="#podstawy">Podstawy</a></li>
+            <li><a href="#fryzury">Fryzury</a></li>
+            <li><a href="#plan">Plan Nauki</a></li>
+            <li><a href="#zasoby">Źródła</a></li>
+            <li><a href="#quiz">Quiz</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="intro" class="section fade-in">
+            <h2>🎯 Wprowadzenie</h2>
+            <p style="font-size: 1.2rem; line-height: 1.8;">Witaj w najobszerniejszym polskim kursie barberskości! Ten przewodnik został stworzony na podstawie wiedzy od profesjonalnych barberów, renomowanych szkół i tysięcy godzin praktyki.</p>
+            
+            <div class="tip">
+                Barberskość to nie tylko strzyżenie - to SZTUKA. Profesjonalni barberzy trenują 600-1500 godzin i potrzebują 2-3 lat praktyki, aby osiągnąć wysoki poziom. Bądź cierpliwy!
+            </div>
+
+            <div class="warning">
+                <strong>Nie oczekuj perfekcji od razu!</strong> Pierwsze 20-30 strzyżeń będzie wymagało 1-2 godzin i nie będą idealne. To NORMALNE. Każdy profesjonalista przez to przeszedł.
+            </div>
+
+            <h3>Co zyskasz z tego kursu?</h3>
+            <ul style="font-size: 1.1rem; line-height: 2;">
+                <li>✅ Kompletną wiedzę o narzędziach (z konkretnymi modelami i cenami)</li>
+                <li>✅ Szczegółowe tutoriale 10+ popularnych fryzur (Taper, Edgar, Blowout, Burst Fade...)</li>
+                <li>✅ Plan nauki krok po kroku (12 miesięcy)</li>
+                <li>✅ Dostęp do najlepszych darmowych źródeł</li>
+                <li>✅ Testy wiedzy i quizy</li>
+                <li>✅ Wskazówki od profesjonalistów</li>
+            </ul>
+        </section>
+
+        <section id="tools" class="section">
+            <h2>🛠️ KROK 1: Narzędzia - Kompletna Lista</h2>
+            
+            <p style="font-size: 1.1rem; margin-bottom: 30px;">Nie musisz kupować najdroższego sprzętu na start, ale JAKOŚĆ MA ZNACZENIE. Tanie narzędzia z Allegro będą ciągnąć włosy zamiast ciąć - frustracja gwarantowana!</p>
+
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">✂️</div>
+                    <h4>Maszynka do Włosów (Clipper)</h4>
+                    <p><strong>Polecane modele dla początkujących:</strong></p>
+                    <ul>
+                        <li><strong>Wahl Magic Clip</strong> - bezprzewodowa, lekka, 90+ min pracy</li>
+                        <li><strong>Wahl Designer</strong> - klasyk, sprawdzona jakość</li>
+                        <li><strong>Andis Master</strong> - mocny silnik, dla grubych włosów</li>
+                        <li><strong>Wahl Senior</strong> - profesjonalna, przewodowa</li>
+                    </ul>
+                    <p><strong>Dlaczego te modele?</strong> Nie przegrzewają się, mają regulowaną dźwignię (lever), długi czas pracy, łatwa konserwacja.</p>
+                    <div class="price">200-500 zł</div>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">🔧</div>
+                    <h4>Trimmer (Konturowka)</h4>
+                    <p><strong>Do precyzyjnych detali i linii:</strong></p>
+                    <ul>
+                        <li><strong>Andis Headliner</strong> - zero gap blade, super ostra</li>
+                        <li><strong>Wahl Detailer</strong> - klasyk, niezawodna</li>
+                        <li><strong>Babyliss Pro</strong> - lekka, ergonomiczna</li>
+                    </ul>
+                    <p><strong>Zastosowanie:</strong> Linie wokół uszu, karku, wzory, precyzyjne detale</p>
+                    <div class="price">150-400 zł</div>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">✂️</div>
+                    <h4>Nożyczki Fryzjerskie</h4>
+                    <p><strong>Długość: 5.5-6 cali (14-15 cm)</strong></p>
+                    <ul>
+                        <li>Stal nierdzewna lub japońska stal</li>
+                        <li>Ergonomiczny uchwyt</li>
+                        <li>Regulowany śrubką napinająca</li>
+                        <li><strong>NIE kupuj zwykłych nożyczek!</strong></li>
+                    </ul>
+                    <p><strong>Do czego:</strong> Dłuższe włosy na górze, teksturowanie, point cutting</p>
+                    <div class="price">100-600 zł</div>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">🪒</div>
+                    <h4>Brzytwa (Straight Razor)</h4>
+                    <p><strong>Dla początkujących:</strong></p>
+                    <ul>
+                        <li>Brzytwa ze zmiennymi ostrzami (bezpieczniejsza)</li>
+                        <li>Pasek do ostrzenia (strop)</li>
+                        <li>Ostrza wymienne (Derby, Feather)</li>
+                    </ul>
+                    <p><strong>Zastosowanie:</strong> Czyste linie, golenie, detale, efekt "fade to skin"</p>
+                    <div class="price">80-300 zł</div>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">📏</div>
+                    <h4>Grzebienie (Combs)</h4>
+                    <p><strong>Musisz mieć:</strong></p>
+                    <ul>
+                        <li><strong>Taper Comb</strong> - do blendingu i fade</li>
+                        <li><strong>Wide-tooth comb</strong> - grube włosy</li>
+                        <li><strong>Fine-tooth comb</strong> - precyzja</li>
+                        <li><strong>Flat-top comb</strong> - clipper over comb</li>
+                        <li><strong>Cutting comb</strong> - ogólne użycie</li>
+                    </ul>
+                    <div class="price">20-80 zł (zestaw)</div>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">🧴</div>
+                    <h4>Środki Pielęgnacyjne</h4>
+                    <ul>
+                        <li><strong>Barbicide</strong> - dezynfekcja (OBOWIĄZKOWE!)</li>
+                        <li><strong>Clipper Oil</strong> - olejek do maszynek</li>
+                        <li><strong>Andis Cool Care</strong> - spray chłodzący</li>
+                        <li><strong>Szczotka do czyszczenia</strong></li>
+                        <li><strong>Spray z wodą</strong></li>
+                    </ul>
+                    <div class="price">50-150 zł</div>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">🎽</div>
+                    <h4>Akcesoria</h4>
+                    <ul>
+                        <li>Peleryna fryzjerska (barber cape)</li>
+                        <li>Paski na szyję (neck strips) - jednorazowe</li>
+                        <li>Ręczniki (2-3 szt.)</li>
+                        <li>Szczotka/zmiotka do włosów</li>
+                        <li>Puder styptic (na skaleczenia)</li>
+                        <li>Lusterko ręczne</li>
+                    </ul>
+                    <div class="price">100-200 zł</div>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">💈</div>
+                    <h4>Nasadki do Maszynki</h4>
+                    <p><strong>Podstawowe rozmiary:</strong></p>
+                    <table style="font-size: 0.9rem;">
+                        <tr>
+                            <th>Nasadka</th>
+                            <th>Długość</th>
+                            <th>Zastosowanie</th>
+                        </tr>
+                        <tr>
+                            <td>#0</td>
+                            <td>0.5mm</td>
+                            <td>Skin fade, bardzo krótko</td>
+                        </tr>
+                        <tr>
+                            <td>#1</td>
+                            <td>3mm</td>
+                            <td>Fade dolna część</td>
+                        </tr>
+                        <tr>
+                            <td>#2</td>
+                            <td>6mm</td>
+                            <td>Fade środek</td>
+                        </tr>
+                        <tr>
+                            <td>#3</td>
+                            <td>9mm</td>
+                            <td>Przejścia, boki</td>
+                        </tr>
+                        <tr>
+                            <td>#4</td>
+                            <td>12mm</td>
+                            <td>Górne boki</td>
+                        </tr>
+                        <tr>
+                            <td>#7-8</td>
+                            <td>22-25mm</td>
+                            <td>Góra głowy</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="tip">
+                <strong>💰 BUDŻET STARTOWY:</strong><br>
+                - Minimum (podstawy): 800-1000 zł<br>
+                - Optymalny start: 1200-1800 zł<br>
+                - Profesjonalny zestaw: 2500-4000 zł
+            </div>
+
+            <div class="warning">
+                <strong>Nie kupuj wszystkiego naraz!</strong> Zacznij od maszynki, trimmera i podstawowych grzebieni. Resztę dokup jak nabierzesz wprawy.
+            </div>
+        </section>
+
+        <section id="podstawy" class="section">
+            <h2>🎓 KROK 2: Podstawy Technik</h2>
+
+            <h3>1. Trzymanie Narzędzi - FUNDAMENT</h3>
+            
+            <div class="comparison-grid">
+                <div class="comparison-card">
+                    <h4>Maszynka (Clipper)</h4>
+                    <ul>
+                        <li>Chwyć pewnie, ale NIE za mocno</li>
+                        <li>Kciuk na dźwigni (lever)</li>
+                        <li>Pozostałe palce stabilizują</li>
+                        <li>Nadgarstek luźny - nie sztywny!</li>
+                        <li>Maszynka = przedłużenie ręki</li>
+                    </ul>
+                    <p><strong>Ćwicz:</strong> Ruch w górę i w dół bez włączania - 10 minut dziennie</p>
+                </div>
+
+                <div class="comparison-card">
+                    <h4>Nożyczki</h4>
+                    <ul>
+                        <li>Kciuk w jednym oku</li>
+                        <li>Palec serdeczny w drugim</li>
+                        <li>Palec wskazujący podpiera</li>
+                        <li>Mały palec na haczyk (jeśli jest)</li>
+                        <li>Tylko górne ostrze się rusza!</li>
+                    </ul>
+                    <p><strong>Ćwicz:</strong> Otwieranie/zamykanie w powietrzu - 100 razy dziennie</p>
+                </div>
+
+                <div class="comparison-card">
+                    <h4>Grzebień</h4>
+                    <ul>
+                        <li>W drugiej ręce (nie z nożyczkami)</li>
+                        <li>Trzymaj między kciukiem a palcami</li>
+                        <li>Płynne ruchy góra-dół</li>
+                        <li>Kąt 45° do głowy</li>
+                    </ul>
+                    <p><strong>Ćwicz:</strong> Clipper over comb na manekinie - godzinami!</p>
+                </div>
+            </div>
+
+            <h3>2. Podstawowe Techniki Cięcia</h3>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Technika</th>
+                        <th>Opis</th>
+                        <th>Kiedy Używać</th>
+                        <th>Poziom</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Clipper Over Comb</strong></td>
+                        <td>Maszynka prowadzona nad grzebieniem</td>
+                        <td>Blendowanie boków, fade, precyzyjne przejścia</td>
+                        <td>🟡 Średni</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Scissor Over Comb</strong></td>
+                        <td>Nożyczki nad grzebieniem</td>
+                        <td>Tekstura, objętość, klasyczne cięcia</td>
+                        <td>🟡 Średni</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Freehand Clipper</strong></td>
+                        <td>Maszynka bez grzebienia</td>
+                        <td>Szybkie skracanie, górna część</td>
+                        <td>🟢 Łatwy</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Point Cutting</strong></td>
+                        <td>Cięcie końcówkami nożyczek</td>
+                        <td>Naturalny efekt, teksturowanie</td>
+                        <td>🟡 Średni</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Texturizing</strong></td>
+                        <td>Przerzedzanie włosów</td>
+                        <td>Redukcja objętości, ruch</td>
+                        <td>🟡 Średni</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tapering</strong></td>
+                        <td>Stopniowe skracanie</td>
+                        <td>Subtelne, klasyczne przejścia</td>
+                        <td>🔴 Trudny</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>3. Rodzaje Fade - Kompletny Przegląd</h3>
+
+            <div class="comparison-grid">
+                <div class="comparison-card">
+                    <h4>🔹 Low Fade</h4>
+                    <p><strong>Gdzie zaczyna się:</strong> Nisko, tuż nad uchem (1-2 cm)</p>
+                    <p><strong>Efekt:</strong> Subtelny, klasyczny, profesjonalny</p>
+                    <p><strong>Dla kogo:</strong> Wszyscy, zwłaszcza konserwatywne zawody</p>
+                    <p><strong>Poziom:</strong> 🟢 Łatwy</p>
+                </div>
+
+                <div class="comparison-card">
+                    <h4>🔹 Mid Fade</h4>
+                    <p><strong>Gdzie zaczyna się:</strong> Połowa wysokości głowy, około skroni</p>
+                    <p><strong>Efekt:</strong> Zbalansowany, uniwersalny</p>
+                    <p><strong>Dla kogo:</strong> 80% klientów - najbardziej popularny!</p>
+                    <p><strong>Poziom:</strong> 🟡 Średni</p>
+                </div>
+
+                <div class="comparison-card">
+                    <h4>🔹 High Fade</h4>
+                    <p><strong>Gdzie zaczyna się:</strong> Wysoko, powyżej skroni</p>
+                    <p><strong>Efekt:</strong> Dramatyczny, nowoczesny, odważny</p>
+                    <p><strong>Dla kogo:</strong> Młodsi klienci, trendy streetwear</p>
+                    <p><strong>Poziom:</strong> 🟡 Średni</p>
+                </div>
+
+                <div class="comparison-card">
+                    <h4>🔹 Skin/Bald Fade</h4>
+                    <p><strong>Gdzie zaczyna się:</strong> Do gołej skóry (0mm)</p>
+                    <p><strong>Efekt:</strong> Ostry kontrast, bardzo czysty</p>
+                    <p><strong>Dla kogo:</strong> Pewni siebie klienci</p>
+                    <p><strong>Poziom:</strong> 🔴 Trudny - ryzyko cięć!</p>
+                </div>
+
+                <div class="comparison-card">
+                    <h4>🔹 Drop Fade</h4>
+                    <p><strong>Charakterystyka:</strong> "Opada" za uchem tworząc łuk</p>
+                    <p><strong>Efekt:</strong> Unikalny, artystyczny wygląd</p>
+                    <p><strong>Dla kogo:</strong> Klienci szukający czegoś więcej</p>
+                    <p><strong>Poziom:</strong> 🔴 Trudny</p>
+                </div>
+
+                <div class="comparison-card">
+                    <h4>🔹 Burst Fade</h4>
+                    <p><strong>Charakterystyka:</strong> Koncentruje się wokół ucha</p>
+                    <p><strong>Efekt:</strong> Nowoczesny, stylowy, modny</p>
+                    <p><strong>Dla kogo:</strong> Mohawki, faux hawks</p>
+                    <p><strong>Poziom:</strong> 🔴 Trudny</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="fryzury" class="section">
+            <h2>✂️ SZCZEGÓŁOWE TUTORIALE FRYZUR</h2>
+
+            <!-- TAPER FADE -->
+            <div class="haircut-tutorial">
+                <h3>1. TAPER FADE <span class="difficulty medium">ŚREDNI</span></h3>
+                <p><strong>Czas wykonania:</strong> 45-60 min (początkujący) | 20-30 min (profesjonalista)</p>
+                <p><strong>Opis:</strong> Klasyczne stopniowe przejście, bardziej subtelne niż tradycyjny fade. Włosy stopniowo się wydłużają od karku w górę.</p>
+                
+                <h4>Potrzebne narzędzia:</h4>
+                <ul>
+                    <li>Maszynka z nasadkami #1, #2, #3, #4</li>
+                    <li>Trimmer</li>
+                    <li>Nożyczki</li>
+                    <li>Taper comb</li>
+                    <li>Spray z wodą</li>
+                </ul>
+
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">1</div>
+                            <div class="step-title">Przygotowanie</div>
+                        </div>
+                        <p>Zwilż włosy lekko sprejem. Zaczesz wszystko w dół naturalnie. Sprawdź wzrost włosów i koronki.</p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">2</div>
+                            <div class="step-title">Linia bazowa #3 (9mm)</div>
+                        </div>
+                        <p>Zacznij od nasadki #3. Strzyż boki i tył ruchem w górę. Zatrzymaj się około 5-7 cm nad uchem. Ta linia będzie Twoją "guideline".</p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">3</div>
+                            <div class="step-title">Przejście #2 (6mm)</div>
+                        </div>
+                        <p>Zmień na #2. Strzyż od dołu do połowy wysokości linii #3. Lekko odchylaj maszynkę u góry ("scooping motion").</p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">4</div>
+                            <div class="step-title">Najniższe przejście #1 (3mm)</div>
+                        </div>
+                        <p>Nasadka #1 - tylko dolna część, do połowy wysokości #2. Blend z dźwignią (lever open/closed).</p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">5</div>
+                            <div class="step-title">Blendowanie</div>
+                        </div>
+                        <p>Używaj dźwigni w pozycji pół-otwartej. Pracuj między liniami wielokrotnie, aż znikną ostre przejścia. To NAJWAŻNIEJSZY krok!</p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">6</div>
+                            <div class="step-title">Clipper Over Comb</div>
+                        </div>
+                        <p>Użyj grzebienia i maszynki (bez nasadki lub #1) do subtelnego wymieszania górnej części z bokami. Płynne ruchy!</p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">7</div>
+                            <div class="step-title">Detale Trimmerem</div>
+                        </div>
+                        <p>Oczyść linię włosów: wokół uszu (łuk lub kąt), kark (pozioma linia lub naturalne zaokrąglenie). Burny - naturalne lub ostre.</p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">8</div>
+                            <div class="step-title">Góra głowy</div>
+                        </div>
+                        <p>Nożyczkami lub nasadką #7-8. Point cutting dla naturalnego efektu. Teksturuj jeśli włosy są grube.</p>
+                    </div>
+                </div>
+
+                <div class="tip">
+                    <strong>WSKAZÓWKA PRO:</strong> W taper fade najważniejsze są subtelne przejścia. Poświęć 70% czasu na blendowanie, a tylko 30% na podstawowe cięcie!
+                </div>
+
+                <div class="warning">
+                    Częsty błąd: Za ostre linie między nasadkami. Rozwiązanie: więcej pracy z dźwignią i clipper over comb!
+                </div>
+            </div>
+
+            <!-- EDGAR CUT -->
+            <div class="haircut-tutorial">
+                <h3>2. EDGAR CUT (TAKUACHE) <span class="difficulty medium">ŚREDNI</span></h3>
+                <p><strong>Czas wykonania:</strong> 40-50 min</p>
+                <p><strong>Opis:</strong> Popularna fryzura z prostą grzywką i wyraźną linią z przodu. Boki zazwyczaj high fade, góra średniej długości.</p>
+                
+                <h4>Charakterystyczne cechy:</h4>
+                <ul>
+                    <li>Prosta, pozioma grzywka na czole</li>
+                    <li>Wyraźna, ostra linia między bokami a górą</li>
+                    <li>High fade lub mid fade po bokach</li>
+                    <li>Góra z włosami 3-5 cm długości</li>
+                </ul>
+
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">1</div>
+                            <div class="step-title">Konsultacja</div>
+                        </div>
+                        <p>Ustal wysokość linii z przodu (zazwyczaj 2-3 cm nad brwiami). Sprawdź gdzie klient chce fade - mid czy high.</p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">2</div>
+                            <div class="step-title">Zrób High/Mid Fade</div>
+                        </div>
+                        <p>Wykonaj standardowy fade (#1, #2, #3). Edgar wymaga OSTREJ linii między bokami a górą, więc blend tylko do pewnego poziomu.</p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">3</div>
+                            <div class="step-title">Stwórz linię bazową góry</div>
+                        </div>
+                        <p>Trimmerem lub maszynką stwórz poziomą, ostrą linię dookoła głowy w miejscu gdzie kończy się fade. BARDZO WAŻNE - musi być równa!</p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">4</div>
+                            <div class="step-title">Równaj górę</div>
+                        </div>
+                        <p>Nożyczkami lub nasadką #4-5 ustaw włosy na górze na równą długość (3-5 cm). Wszystko ma być na tym samym poziomie!</p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">5</div>
+                            <div class="step-title">KLUCZOWY KROK: Grzywka</div>
+                        </div>
+                        <p>Zacesz włosy z przodu PROSTO w dół. Nożyczkami zrób PROSTĄ, POZIOMĄ linię 2-3 cm nad brwiami. To definiująca cecha Edgar!</p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">6</div>
+                            <div class="step-title">Detale</div>
+                        </div>
+                        <p>Upewnij się, że linia dookoła głowy jest ostra i czysta. Edgar = geometryczne, ostre linie!</p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">7</div>
+                            <div class="step-title">Stylizacja</div>
+                        </div>
+                        <p>Użyj wosku lub pomady średniego chwytu. Grzywka prosto w dół lub lekko na bok. Góra może być lekko uniesiona.</p>
+                    </div>
+                </div>
+
+                <div class="tip">
+                    Edgar to fryzura geometryczna - wszystkie linie muszą być OSTRE i CZYSTE. Używaj trimmera z pewną ręką!
+                </div>
+
+                <div class="warning">
+                    Nie blend linii między bokami a górą zbyt mocno - Edgar wymaga wyraźnego rozdziału!
+                </div>
+            </div>
+
+            <!-- BLOWOUT TAPER -->
+            <div class="haircut-tutorial">
+                <h3>3. BLOWOUT TAPER <span class="difficulty hard">TRUDNY</span></h3>
+                <p><strong>Czas wykonania:</strong> 60-90 min</p>
+                <p><strong>Opis:</strong> Fryzura z bardzo dłuższą górą (często 10-15 cm), która jest "rozdmuchana" do góry. Połączenie długiej góry z ostrym taper fade.</p>
+                
+                <h4>Co sprawia, że jest trudna:</h4>
+                <ul>
+                    <li>Wymaga umiejętności pracy z długimi włosami</li>
+                    <li>Precyzyjne teksturowanie i nakładanie warstw</li>
+                    <li>Musi być dobrze wyblendowana długa góra z krótkimi bokami</li>
+                    <li>Wymaga suszarki i technik stylizacji</li>
+                </ul>
+
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">1</div>
+                            <div class="step-title">Konsultacja i plan</div>
+                        </div>
+                        <p>Określ długość góry (8-15 cm). Sprawdź kierunek wzrostu włosów - to kluczowe dla blowout!</p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">2</div>
+                            <div class="step-title">Wykonaj Taper Fade</div>
+                        </div>
+                        <p>Standardowy taper lub mid fade (#1, #2, #3, #4). Koncentruj się na czystych przejściach.</p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">3</div>
+                            <div class="step-title">Oddziel górę</div>
+                        </div>
+                        <p>Grzebieniem oddziel włosy na górze głowy. Zacznij od linii około 2-3 cm od miejsca gdzie kończy się fade.</p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">4</div>
+                            <div class="step-title">Cięcie góry - warstwy</div>
+                        </div>
+                        <p>Trzymając sekcje włosów pionowo, przytnij do ustalonej długości. NIE tnij wszystkiego na równo - potrzebujesz warstw!</p>
+                        <ul>
+                            <li>Środek głowy - najdłuższy (100%)</li>
+                            <li>Boki góry - 80-90% długości środka</li>
+                            <li>Front - może być 90-100%</li>
+                        </ul>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">5</div>
+                            <div class="step-title">KLUCZOWY: Blend długiej góry z bokami</div>
+                        </div>
+                        <p>Używaj clipper over comb i scissor over comb w strefie przejściowej. Góra musi płynnie przechodzić w boki - to najtrudniejsza część!</p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">6</div>
+                            <div class="step-title">Teksturowanie</div>
+                        </div>
+                        <p>Point cutting i texturizing shears na górze. Usuń wagę z końcówek, ale zachowaj długość. To daje "ruch".</p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">7</div>
+                            <div class="step-title">Suszenie suszarką (Blow-drying)</div>
+                        </div>
+                        <p>TO TUTAJ POWSTAJE BLOWOUT:</p>
+                        <ul>
+                            <li>Nałóż pre-styling product (mousse lub spray)</li>
+                            <li>Susz włosy okrągłą szczotką DO GÓRY</li>
+                            <li>Szczotka pod włosami, suszarka z góry</li>
+                            <li>Unoś włosy od nasady</li>
+                            <li>Susz do 90%, zostaw lekko wilgotne</li>
+                        </ul>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">8</div>
+                            <div class="step-title">Finalne stylizowanie</div>
+                        </div>
+                        <p>Pomada lub pasta (średni/mocny chwyt). Przeczesuj palcami DO GÓRY i lekko do tyłu. Efekt "rozdmuchanego" wyglądu.</p>
+                    </div>
+                </div>
+
+                <div class="tip">
+                    Sekretem blowout jest objętość u nasady! Bez prawidłowego suszenia suszarką, to tylko długie włosy na górze.
+                </div>
+
+                <div class="warning">
+                    Częsty błąd: Zbyt ostre przejście między długą górą a krótkimi bokami. Musisz poświęcić DUŻO czasu na blendowanie tej strefy!
+                </div>
+
+                <div class="video-resources">
+                    <h4>📺 Polecane tutoriale YouTube:</h4>
+                    <p><strong>"Blowout Haircut Tutorial"</strong> - 360Jeezy, Chris Bossio</p>
+                    <p><strong>"How to use blow dryer for volume"</strong> - BlueM aanBarber</p>
+                </div>
+            </div>
+
+            <!-- BURST FADE -->
+            <div class="haircut-tutorial">
+                <h3>4. BURST FADE <span class="difficulty hard">TRUDNY</span></h3>
+                <p><strong>Czas wykonania:</strong> 50-70 min</p>
+                <p><strong>Opis:</strong> Fade który "wybucha" wokół ucha w kształcie półkola, pozostawiając włosy z tyłu głowy dłuższe. Popularny z mohawkami i faux hawkami.</p>
+                
+                <h4>Charakterystyka:</h4>
+                <ul>
+                    <li>Przejście koncentruje się TYLKO wokół uszu</li>
+                    <li>Tył głowy często pozostaje dłuższy</li>
+                    <li>Kształt "eksplozji" lub półksiężyca</li>
+                    <li>Wymaga precyzji i zrozumienia kierunków</li>
+                </ul>
+
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">1</div>
+                            <div class="step-title">Wizualizacja i planowanie</div>
+                        </div>
+                        <p>Wyobraź sobie półkole wokół ucha - to będzie strefa fade. TYŁ GŁOWY nie będzie fade!</p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">2</div>
+                            <div class="step-title">Wyznacz strefę burst</div>
+                        </div>
+                        <p>Nasadką #3 lub #4 zaznacz "strefę burst" - półkole od skroni, wokół ucha, kończące się przed tyłem głowy.</p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">3</div>
+                            <div class="step-title">Najniższa część - wokół ucha</div>
+                        </div>
+                        <p>Zacznij od #1 lub #0.5 TYLKO wokół ucha. Trzymaj maszynkę pod kątem - podążając za krzywizną głowy wokół ucha.</p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">4</div>
+                            <div class="step-title">Buduj "eksplozję"</div>
+                        </div>
+                        <p>Stopniowo przechodź do #2, #3, #4 - ale TYLKO w strefie półkola! Ruchy muszą podążać za kształtem burst.</p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">5</div>
+                            <div class="step-title">Blend wewnątrz burst</div>
+                        </div>
+                        <p>Używaj dźwigni i clipper over comb aby wymieszać nasadki #1→#2→#3→#4 w strefie burst. To musi być płynne!</p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">6</div>
+                            <div class="step-title">Tył głowy</div>
+                        </div>
+                        <p>Pozostaw dłuższy (najczęściej #3 lub #4 na równo) LUB zrób delikatny taper. ALE nie fade - to kluczowa różnica!</p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">7</div>
+                            <div class="step-title">Przejście burst→tył</div>
+                        </div>
+                        <p>Najważniejsze! Blend miejsca gdzie kończy się burst a zaczyna tył. Musi być SUBTELNE przejście.</p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">8</div>
+                            <div class="step-title">Góra i detale</div>
+                        </div>
+                        <p>Góra według preferencji (mohawk, faux hawk, klasyczna). Trimmerem wyczyść linie wokół uszu.</p>
+                    </div>
+                </div>
+
+                <div class="tip">
+                    Burst fade wymaga zrozumienia, że TO NIE jest standardowy fade dookoła głowy - to półkolista "eksplozja" wokół ucha!
+                </div>
+
+                <div class="warning">
+                    Początkujący często robią burst za szeroki (zbyt daleko do tyłu) - pamiętaj, tył ma być DŁUŻSZY!
+                </div>
+            </div>
+
+            <!-- SKIN FADE -->
+            <div class="haircut-tutorial">
+                <h3>5. SKIN FADE (BALD FADE) <span class="difficulty hard">BARDZO TRUDNY</span></h3>
+                <p><strong>Czas wykonania:</strong> 60-90 min (początkujący)</p>
+                <p><strong>Opis:</strong> Najbardziej zaawansowany fade - przejście do GOŁEJ SKÓRY (0mm). Wymaga bardzo precyzyjnej techniki i delikatnego podejścia.</p>
+                
+                <h4>Dlaczego jest trudny:</h4>
+                <ul>
+                    <li>Bardzo łatwo skaleczyć klienta</li>
+                    <li>Wymaga wielu przejść i narzędzi</li>
+                    <li>Musi być PERFEKCYJNIE wyblendowany</li>
+                    <li>Każdy błąd jest bardzo widoczny</li>
+                    <li>Wymaga użycia brzytwy lub bald fade adjustable clipper</li>
+                </ul>
+
+                <div class="warning">
+                    <strong>NIE próbuj tego na prawdziwym kliencie zanim nie zrobisz 50+ zwykłych fade!</strong> Skin fade to technika dla doświadczonych barberów.
+                </div>
+
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-header">
+                            <div class="step-number">1</div>
+                            <div class="step-title">Przygotowanie - KRYTYCZNE</div>
+                        </div>
+                        <p>Upewnij się, że twoje narzędzia są OSTRE. Tępe ostrza będą ciągnąć włosy zamiast ciąć - ból i podrażnienia
